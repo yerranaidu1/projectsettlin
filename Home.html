@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="nav.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="stick">
+        <ul>
+            <li><a href=""><img src="tiger.png"></a></li>
+            <li style="background:green;color:white;"><a href="home.html"">HOME</a></li>
+            <li><a href="items.html">ITEMS</a></li>
+            <li><a href="about.html">ABOUTUS</a></li>
+            <li><a href="contact.html">CONTACTUS</a></li>
+            <li style="float:right"><a href="signup.html">SIGNUP</a></li>
+        </ul>
+        </div>
+                <h3>Home Page</h3>
+                <p id="js"></p>
+                <img id="jk">
+                
+                <button type="button" onclick='document.getElementById("js").innerHTML = "Naidu"'>Click Me</button>
+                <br/>
+                
+                <button onclick='document.getElementById("jk").src="tiger.png"'>clickme</button>
+                <br/>
+                <p id="time"></p>
+                <button onclick="document.getElementById('time').innerHTML = Date()">onclick time</button>
+                <p id="mouse"></p>
+                <button onmouseover="document.getElementById('mouse').innerHTML = Date()">mouse over time</button>
+                <br/>
+                
+                
+                <p id="color">naidunani</p>
+                
+                <button onclick="document.getElementById('color').style.color='yellow'">color</button>
+                <button onclick="document.getElementById('color').style.fontSize='100px'">color</button>
+                <br>
+                <button type="button" onclick="nani()">nana</button>
+                <p id="kkka">nannananna</p>
+                <div id="calin">
+                    <form >
+                        <input type="number" id="name">
+                        <br/>
+                        <input type="number" id="name1">
+                         <br/>
+                        <input type="button" onclick="add()" value="+">
+                        <input type="button" onclick="sub()" value="-">
+                        <input type="button" onclick="div()"value="/">
+                        <input type="button" onclick="mod()"value="%">
+                        <input type="button" onclick="mul()"value="*">
+               
+                    </form>
+                </div>
+                <p><span id="display"> ssss</span></p>
+            <script>
+                
+                function nani()
+                {
+                getElementById("kkka").innerHtml="red";
+                }
+               function add()
+                    {
+                    var m=document.getElementById("name").value;
+                    var n=document.getElementById("name1").value;
+                    document.getElementById("display").innerHtml=eval(m+n);
+                    }
+                 function sub()
+                    {
+                    var m=parseInt(document.getElementById("name").value);
+                    var n=parseInt(document.getElementById("name1").value);
+                    document.getElementById("display").innerHtml=eval(m-n);
+                    }
+                    function div()
+                        {
+                        var m=document.getElementById("name").value;
+                        var n=document.getElementById("name1").value;
+                        document.getElementById("display").innerHtml=eval(m/n);
+                        }
+                        function mod()
+                            {
+                            var m=document.getElementById("name").value;
+                            var n=document.getElementById("name1").value;
+                            document.getElementById("display").innerHtml=eval(m%n);
+                            }
+                            function mul()
+                                {
+                                var m=document.getElementById("name").value;
+                                var n=document.getElementById("name1").value;
+                                document.getElementById("display").innerHtml=eval(m*n);
+                                }
+                </script>
+                
+          
+    </body>
+</html>

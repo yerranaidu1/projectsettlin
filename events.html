@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <div onclick="this.innerHTML='NAIDUNANI'">ONCLICK EVENT</div>
+    <br/>
+    <button type="button" onmouseout="myFun()">ONMOUSEOUT</button>
+    <p id="nani">ON MOSEOUTEVENT</p>
+    <BR/>
+
+    
+    <button type="button" onmousedown="myFun1()">ONMOUSEDOWN</button>
+    <p id="nani1">ON MOUSEDOWN</p>
+    <br/>
+    <button type="button" onmouseover="myFun2()">ONMOUSEOVER</button>
+    <p id="nani2">ON MOUSEOVER</p>
+    <br/>
+    <button type="button" onmousewheel="myFun3()">ONMOUSEWHEEL</button>
+    <p id="nani3">ON MOUSEWHEEL</p>
+    <br/>
+
+
+    <script>
+        function myFun() {
+            document.getElementById("nani").style.color="red";
+            
+
+        }
+        function myFun1()
+        {
+            document.getElementById("nani1").style.backgroundColor = "red";
+        }
+        function myFun2() {
+                document.getElementById("nani2").style.fontSize= "50px";
+            }
+            function myFun3() {
+                    document.getElementById("nani3").style.fontFamily= " Arial";
+                }
+
+    </script>
+</body>
+
+</html>

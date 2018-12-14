@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <div id="nani">BY ELEMENT ID CHANGING NAME</div>
+    <BR/>
+   <div class="nani1">BY CLASS NAME O INDEX TEXT COLOR</div>
+<BR />
+
+<div class="nani1">BY CLASS NAME 1 INDEX BACKGROUND COLOR</div>
+<BR />
+
+<div class="nani2">BY QUERY SELCTOR FONT SIZE</div>
+<BR />
+<div class="nani3">BY QUERY SELCTOR ALL FONT SIZE</div>
+<BR />
+<div class="nani3">BY QUERY SELCTOR ALL FONT SIZE</div>
+<BR />
+
+    <button type="button" onclick="myFun()">submit</button>
+
+    <script>
+        function myFun() {
+            document.getElementById("nani").innerHTML="NAIDUNANI"
+            var x=document.getElementsByClassName("nani1");
+            x[1].style.backgroundColor = "red";
+            var x = document.getElementsByClassName("nani1");
+            x[0].style.color = "red";
+
+            document.querySelector(".nani2").style.fontSize ="80px";
+
+            var y=document.querySelectorAll(".nani3");
+           y[0].style.float = "right";
+        }
+    </script>
+</body>
+
+</html>

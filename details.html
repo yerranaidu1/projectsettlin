@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="details.css" rel="stylesheet" type="text/css">
+        <link href="settlinnav.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+
+    <a href="settlin.html"><img src="settlin.png"></a>
+    <ul>
+        <li><a href="settlin.html">Home</a></li>
+        <li><a href="whatsapp.html">Whatsapp</a></li>
+        <li><a href="settlincontact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="details.html">Details</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li id="sign"><a href="settlinsignup.html" target="_self">SignUp/In</a></li>
+    </ul>
+    <div id="backimg">
+        <div id="color1">
+        </div>
+        <div class="container">
+            <form>
+                <input name='name' type="text" style="background:transparent;"class="box" id="name" placeholder="name">
+                    <br />
+                <input name='dob' type="date" class="box" id="dob" onfocusout="ageDone()">
+                    <br />
+                <input name='age' type="tel" class="box" id="age" placeholder="age">
+                    <br />
+                <input name='adolscence' type="text" class="box" id="minmaj" placeholder="minor/major">
+                    <br />
+                <select class="box" id="hobbie">
+                    <option value=""> ---Hobbies---</option>
+                    <option value="cricket" class="cric">playing cricket</option>
+                    <option value="cooking" class="cook"> coocking</option>
+                </select>
+                    <br />
+                <button type="button" style="margin-left:143px;"onclick="myFunction()"><b>submit</b></button>
+            </form>
+        </div>
+
+            
+            <div id="first">
+            <button id="finald1" type="button" style="margin-right:0px;" onclick="myBlock()"><b>Display</b></button>
+            </div>
+            <div id="first1">
+                <div class="flex-container">
+                   <div class='flex-items'><u>Name</u><p id="flname"></p></div>
+                   <div class='flex-items' id="dobbox"><u>DOB</u><p id="fldob"></p></div>
+                   <div class='flex-items'><u>Age</u><p id="flage"></p></div>
+                   <div class='flex-items'><u>Adolscence</u><p id="flminor"></p></div>
+                   <div class='flex-items'><u>Hobbies</u><p id="flhobb"></p></div>
+                </div>
+            </div>
+        <script>
+             function myFunction() {
+
+                    var name = document.getElementById("name").value;
+                    var birth = document.getElementById("dob").value;
+                    var hobb = document.getElementById("hobbie").value;
+                    var today = new Date();
+                    var birthDate = new Date(birth);
+                    var preage = today.getFullYear() - birthDate.getFullYear();
+                    var minmaj = " ";
+                    document.getElementById("age").value = preage;
+                    if (preage < 18) {
+                        document.getElementById("minmaj").value = "minor";
+                        minmaj = "minor";
+                    }
+                    else {
+                        document.getElementById("minmaj").value = "major";
+                        minmaj = "major";
+                    }
+
+                    var personalDetails = { name, birth: birth, age: preage, adolscence: minmaj, hobbies: hobb };
+                    console.log(personalDetails, '333');
+
+                    document.getElementById("flname").innerHTML = personalDetails.name;
+                    document.getElementById("fldob").innerHTML = personalDetails.birth;
+                    document.getElementById("flage").innerHTML = personalDetails.age;
+                    document.getElementById("flminor").innerHTML = personalDetails.adolscence;
+                    document.getElementById("flhobb").innerHTML = personalDetails.hobbies;
+                    document.getElementById("finald1").style.display = "block";
+                }
+                function ageDone() {
+
+                    var birth = document.getElementById("dob").value;
+                    var today = new Date();
+                    var birthDate = new Date(birth);
+                    var preage = today.getFullYear() - birthDate.getFullYear();
+                    document.getElementById("age").value = preage;
+                    var minmaj = " ";
+                    if (preage < 18) {
+                        document.getElementById("minmaj").value = "minor";
+                        minmaj = "minor";
+                    }
+                    else {
+                        document.getElementById("minmaj").value = "major";
+                        minmaj = "major";
+                    }
+                }
+                function myBlock() {
+
+                    document.getElementById("first1").style.display = "block";
+                }
+            
+        </script>
+    </body>
+</html>

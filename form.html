@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #container
+        {
+            width:210px;
+            padding:10px;
+            position:absolute;
+            margin-left:300px;
+            top:0px;
+        }
+        input[type=text]
+        {
+            padding:10px;
+            margin-top:10px;
+        }
+         #elementchange
+        {
+            width:210px;
+            padding:10px;
+            position:absolute;
+            margin-left:600px;
+            top:0px;
+        }
+        #time
+        {
+            width:100px;
+            padding:10px;
+            position:absolute;
+            margin-left:900px;
+            top:0px;
+        }
+    </style>
+<body>
+<div id="time">
+    <p id="time1">hours</p>
+    <p id="time2">day</p>
+    <p id="time3">date</p>
+    <p id="time4">minutes</p>
+    <p id="time5">seconds</p>
+
+    <button type="button" onclick="timeFun()">Hours</button>
+</div>
+
+
+
+
+    <div id="elementchange">
+    <div id="nani0">BY ELEMENT ID CHANGING NAME</div>
+    <BR />
+    <div class="nani1">BY CLASS NAME O INDEX TEXT COLOR</div>
+    <BR />
+    
+    <div class="nani1">BY CLASS NAME 1 INDEX BACKGROUND COLOR</div>
+    <BR />
+    
+    <div class="nani2">BY QUERY SELCTOR FONT SIZE</div>
+    <BR />
+    <div class="nani3">BY QUERY SELCTOR ALL FONT color</div>
+    <BR />
+    <div class="nani3">BY QUERY SELCTOR background color</div>
+    <BR />
+    <span>naidunaninanani</span>
+    
+    <button type="button" onclick="myFun123()">submit</button>
+    </div>
+
+    <div id="form1">
+    <form style="width:400px;">
+        <input type="text" onkeypress="funMy()" value="press any key ">
+        <br/>
+        <input type="text" onkeydown="funMy1()" value=" key down">
+        <br/>
+        <input type="text" onkeyup="funMy2()" value="press and key up">
+        <br/>
+        <input type="text" onselect="funMy3()" value="on select">
+        <br/>
+         <input type="text" onchange="funMy4()" value="on change">
+        <br/>
+        <input type="text" onblur="funMy5()" value="on blur">
+        <br />
+        </div>
+<div id="container" style="float:right;margin-top:0px;">
+
+        <div onclick="this.innerHTML='NAIDUNANI'">ONCLICK EVENT</div>
+        <br />
+        <button type="button" onmouseout="myFun()">ONMOUSEOUT</button>
+        <p id="nani">ON MOSEOUTEVENT</p>
+        <BR />
+        <button type="button" onmousedown="myFun1()">ONMOUSEDOWN</button>
+        <p id="nani1">ON MOUSEDOWN</p>
+        <br />
+        <button type="button" onmouseover="myFun2()">ONMOUSEOVER</button>
+        <p id="nani2">ON MOUSEOVER</p>
+        <br />
+        <button type="button" onmousewheel="myFun3()">ONMOUSEWHEEL</button>
+        <p id="nani3">ON MOUSEWHEEL</p>
+
+        <br />
+        </div>
+        
+    <script>
+            function myFun() {
+                document.getElementById("nani").style.color = "red";
+            }
+            function myFun1() {
+                document.getElementById("nani1").style.backgroundColor = "red";
+            }
+            function myFun2() {
+                document.getElementById("nani2").style.fontSize = "50px";
+            }
+            function myFun3() {
+                document.getElementById("nani3").style.fontFamily = " Arial";
+            }
+function funMy()
+{
+    alert("keypressed");
+}
+    function funMy1() {
+        alert("keypressed down");
+    }
+    function funMy2() {
+            alert("keypress and leaveup down");
+        }
+        function funMy3() {
+                alert("on select");
+            }
+             function funMy4() {
+                    alert("on change");
+                }
+                function funMy5() {
+                        alert("on blur");
+                    }
+
+                function myFun123() {
+                        var z=document.getElementsByTagName("span")[0];
+                        z.innerHTML="NAIDU";
+
+                        document.getElementById("nani0").innerHTML = "NAIDUNANI"
+                        var x = document.getElementsByClassName("nani1");
+                        x[1].style.backgroundColor = "red";
+                        var x = document.getElementsByClassName("nani1");
+                        x[0].style.color = "red";
+
+                        document.querySelector(".nani2").style.fontSize = "50px";
+
+                        var y = document.querySelectorAll(".nani3");
+                        y[0].style.color= "blue";
+                        var y = document.querySelectorAll(".nani3");
+                        y[1].style.backgroundColor= "yellow";
+                    }
+
+
+
+
+
+
+                    function timeFun() {
+                            var ti = new Date();
+                            var tame = ti.getHours();
+                            var na=ti.getDay();
+                            var nan=ti.getDate();
+                            var min=ti.getMinutes();
+                            var sec=ti.getSeconds();
+                            document.getElementById("time1").innerHTML = tame;
+                            document.getElementById("time2").innerHTML = na;
+                            document.getElementById("time3").innerHTML = nan;
+                            document.getElementById("time4").innerHTML = min;
+                            document.getElementById("time5").innerHTML = sec;
+
+                        }
+        </script>
+
+
+    </form>
+</body>
+
+</html>

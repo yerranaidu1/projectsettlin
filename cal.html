@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #box
+        {
+            margin:auto;
+            width:50px;
+            
+        }
+        input[type=button]
+        {
+            padding:20px;
+            margin:1px;
+            width:60px;
+            height:60px;
+            border:none;
+            
+        }
+        input[type=button]:hover{
+            color:blue;
+            font-size: 0.8em;
+            border:1px solid black;
+        }
+    </style>
+    <body>
+        <div id="box">
+                    <div>
+                        <input type="button" onclick="add(1)" value="1">
+                        <input type="button" onclick="add(2)" value="2">
+                        <input type="button" onclick="add(3)" value="3">
+                        <input type="button" onclick="mul('+')" value="+">
+                    </div>
+                    <div>
+                        <input type="button" onclick="add(4)" value="4">
+                        <input type="button" onclick="add(5)" value="5">
+                        <input type="button" onclick="add(6)" value="6">
+                        <input type="button" onclick="add('-')" value="-">
+            
+                    </div>
+                    <div>
+                        <input type="button" onclick="add(7)" value="7">
+                        <input type="button" onclick="sub(8)" value="8">
+                        <input type="button" onclick="div(9)" value="9">
+                        <input type="button" onclick="mod('*')" value="*">
+            
+                    </div>
+                    <div>
+                        <input type="button" onclick="add('/')" value="/">
+                        <input type="button" onclick="sub(0)" value="0">
+                        <input type="button" onclick="div('%')" value="%">
+                        <input type="button" onclick="div('AC')" value="AC" style="color:red">
+                    </div>
+            </div>
+                <p><span id="display"> ssss</span></p>
+            <script>
+               function add(a)
+                    {
+                    var m=document.getElementById("name").value;
+                    var n=document.getElementById("name1").value;
+                    document.getElementById("display").innerHtml=eval(m+n);
+                    }
+                 function sub()
+                    {
+                    var m=parseInt(document.getElementById("name").value);
+                    var n=parseInt(document.getElementById("name1").value);
+                    document.getElementById("display").innerHtml=eval(m-n);
+                    }
+                    function div()
+                        {
+                        var m=document.getElementById("name").value;
+                        var n=document.getElementById("name1").value;
+                        document.getElementById("display").innerHtml=eval(m/n);
+                        }
+                        function mod()
+                            {
+                            var m=document.getElementById("name").value;
+                            var n=document.getElementById("name1").value;
+                            document.getElementById("display").innerHtml=eval(m%n);
+                            }
+                            function mul()
+                                {
+                                var m=document.getElementById("name").value;
+                                var n=document.getElementById("name1").value;
+                                document.getElementById("display").innerHtml=eval(m*n);
+                                }
+        
+</script>
+</body>
+</html>

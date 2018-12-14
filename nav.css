@@ -1,0 +1,56 @@
+li{
+    float:left;
+    padding:10px;
+    
+}
+ul
+{
+    list-style-type:none;
+    display:inline-block;
+    background: grey;
+    box-sizing:border-box;
+    width:100%;
+    position:relative;
+    
+}
+li a
+{
+    text-decoration: none;
+    margin-right:30px;
+    color:white;
+}
+li a:hover{
+    color:fuchsia;
+    
+}
+li:hover{
+    background: black;
+}
+#stick
+{
+    top:0px;
+    position:sticky;
+}
+li a img
+{   top:0px;
+    position:absolute;
+    height:40px;
+    left:0px;
+}
+#calin
+{
+    display:inline-block;
+    background:blue;
+    position:relative;
+    margin-left:480px;
+    
+}
+input[type=text]
+{
+    padding:10px;
+    width:200px;
+    outlin:none;
+    margin:10px;
+    
+    
+}
